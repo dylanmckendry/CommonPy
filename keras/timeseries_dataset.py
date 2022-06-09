@@ -1,3 +1,6 @@
+import numpy as np
+import tensorflow as tf
+
 def timeseries_dataset_from_array(
         data,
         data_times,
