@@ -175,7 +175,7 @@ def timeseries_dataset_from_array(
 
     # Generate start positions
     start_positions = np.arange(0, num_seqs, sequence_stride, dtype=index_dtype)
-    print(len(start_positions))
+    
     if data_times is not None:
         start_positions_to_remove = []
         for i in range(len(start_positions)):
@@ -186,7 +186,7 @@ def timeseries_dataset_from_array(
                 start_positions_to_remove.append(i)
 
         start_positions = np.delete(start_positions, start_positions_to_remove)
-    print(len(start_positions))
+    
     if shuffle:
         if seed is None:
             seed = np.random.randint(1e6)
